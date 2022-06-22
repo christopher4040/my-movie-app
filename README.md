@@ -2,7 +2,7 @@
 
 ## Description
   - Movies website created with ReactJS. On this app you would be able to see the information of Now Playing Movies.
-  - 
+  
 ## Roadmap
 - Add more options/data to the movies
 - Change the UI
