@@ -3,17 +3,11 @@ function Movie({data}) {
 
     return(
       <div className="movie-card">
-              <div className="movie-header" style={{background: `url(https://image.tmdb.org/t/p/w300/${data.poster_path})`, backgroundSize: 'cover'}}>
-                  <div className="header-icon-container">
-                      <a href="#">
-                          <i className="material-icons header-icon"></i>
-                      </a>
-                  </div>
-              </div>
+              <div className="movie-header" style={{background: `url(https://image.tmdb.org/t/p/w400/${data.poster_path})`, backgroundSize: 'cover', borderRadius: "10px"}}/>
               <div className="movie-content">
                   <div className="movie-content-header">
                       <a href="#">
-                          <h3 className="movie-title">{data.title}</h3>
+                          <p className="movie-title">{data.title}</p>
                       </a>
                   </div>
                   <div className="movie-info">

@@ -15,13 +15,34 @@ function App() {
   
     return (
       <>
-        <div className="container text-center">
-          <div className="col-sm">
-            {loaded &&
-              data.results.map((movie, i) => (<Movie key={i} data={movie} />
-              ))}
-          </div>
+        <div className="container-fluid p-0">
+            <div className="row flex-nowrap m-0 h-100 w-100">
+                <div className="col-auto col-md-3 col-xl-2 px-0" style={{width: "280px"}}>
+                    <SideBar />
+                </div>
+                <div className="text-center col h-100" style={{background: "rgba(24,23,29,255)"}}>
+                    <Navbar />
+                    <div className="col-sm h-100">
+                        {/* {loaded &&
+                        data.results.map((movie, i) => (<Movie key={i} data={movie} />
+                        ))} */}
+                        {loaded ?
+                        data.results.map((movie, i) => (<Movie key={i} data={movie} />)) :
+                        <div className="modal-dialog modal-xs modal-dialog-centered">
+                            <div className="modal-content bg-transparent">
+                                <div className="modal-body">
+                                    <div className="spinner-border" style={{width: "4rem", height: "4rem", color: "white"}} role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
+        
       </>
     );
   }
